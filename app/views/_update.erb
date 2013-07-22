@@ -1,0 +1,20 @@
+<!-- <div class="update note"> --> 
+
+
+<% if @note_update %>
+  <form action="/update" method="post">
+  
+    <input type="hidden" name="id" value="<%= @note_update.id %>  ">
+  
+    <input type="text" name="title" value="<%= @note_update.title %>" placeholder="Title"><br>
+  
+    <TEXTAREA name="content" rows=3 cols=30 placeholder="Content"><%= @note_update.content %></TEXTAREA>
+    <br>
+  
+    <input class="btn btn-primary" type="submit" value="Make History">
+  
+  </form>
+<% else %>
+  <p>No notes to update.</p>
+<% end %>
+<!-- </div> -->
